@@ -1,7 +1,7 @@
 module.exports = {
     preset: 'ts-jest',
     testEnvironment: 'node',
-    testMatch: ['test/**/*.test.ts'],
+    testMatch: ['<rootDir>/test/*.test.ts'],
     collectCoverage: true,
     verbose: true
 };
