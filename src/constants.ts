@@ -1,1 +1,1 @@
-const g_transalte_url = 'translate.google.cn';
+export const google_transalte_url = 'translate.google.cn';

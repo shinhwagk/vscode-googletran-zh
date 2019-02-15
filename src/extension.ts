@@ -29,7 +29,7 @@ function translateCommand() {
 
     const selection = editor.selection;
     const text = editor.document.getText(selection);
-    googleTransalte.translate('translate.google.cn', text).then(t => window.showInformationMessage(t.text));
+    googleTransalte.translate(text).then(t => window.showInformationMessage(t.text));
 }
 
 function registerHoverProvider(context) {
@@ -41,9 +41,7 @@ export class TranslateHoverProvider implements HoverProvider {
     provideHover(document: TextDocument, position: Position): ProviderResult<Hover> {
         const word = wordExtract(document, position);
         if (!word) return undefined;
-        return googleTransalte
-            .translate('translate.google.cn', word)
-            .then(ff => new Hover('ffdfd ' + ff.text));
+        return googleTransalte.translate(word).then(ff => new Hover('ffdfd ' + ff.text));
         // .catch(window.showErrorMessage)
     }
 }

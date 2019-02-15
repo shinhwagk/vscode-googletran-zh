@@ -1,9 +1,11 @@
 import * as querystring from 'querystring';
 import * as got from 'got';
 import * as token from './google-tkk';
+import { google_transalte_url } from './constants';
 
-export function translate(gUrl: string, text: string, opts?) {
+export function translate(text: string, gUrl?: string, opts?) {
     opts = opts || { from: 'en', to: 'zh-cn' };
+    gUrl = gUrl || google_transalte_url;
 
     return token
         .get(gUrl, text)
