@@ -4,43 +4,22 @@ import {
     Hover,
     MarkdownString,
     languages,
+    commands,
     HoverProvider,
     TextDocument,
     ProviderResult,
     Position
 } from 'vscode';
-import { translate } from './translate';
+import * as googleTransalte from './google-transalte';
 
-async function activate(context: ExtensionContext) {
+export async function activate(context: ExtensionContext) {
     console.log('Congratulations, your extension "vscode-translate" is now active!');
-    // context.subscriptions.push(commands.registerCommand('extension.translate', translateCommand));
+    context.subscriptions.push(commands.registerCommand('extension.translate', translateCommand));
     registerHoverProvider(context);
-    window.onDidChangeActiveTextEditor(
-        e => {
-            console.log('3333');
-            e.document.getText(e.selection);
-            window.showInformationMessage('1112');
-        },
-        undefined,
-        context.subscriptions
-    );
-
-    window.onDidChangeTextEditorSelection(
-        e => {
-            console.log(e.textEditor.document.getText(e.textEditor.selection));
-            // translateHover().then(context.subscriptions.push);
-        },
-        undefined,
-        context.subscriptions
-    );
 }
 
-exports.activate = activate;
-function deactivate() {}
-module.exports = {
-    activate,
-    deactivate
-};
+export function deactivate() {}
+
 function translateCommand() {
     const editor = window.activeTextEditor;
 
@@ -50,27 +29,7 @@ function translateCommand() {
 
     const selection = editor.selection;
     const text = editor.document.getText(selection);
-}
-
-async function translateHover() {
-    async function provideHover(document, position) {
-        console.log(position.line);
-        window.showInformationMessage(position.line);
-        const selection = window.activeTextEditor.selection;
-        const text = window.activeTextEditor.document.getText(selection);
-        const ttext = await translate(text);
-
-        const contents: MarkdownString = new MarkdownString();
-        contents.isTrusted = true;
-        return new Hover(ttext.candidate.join(','));
-    }
-
-    return languages.registerHoverProvider('*', {
-        provideHover(document, position) {
-            console.log(position);
-            return provideHover(document, position);
-        }
-    });
+    googleTransalte.translate('translate.google.cn', text).then(t => window.showInformationMessage(t.text));
 }
 
 function registerHoverProvider(context) {
@@ -81,19 +40,23 @@ function registerHoverProvider(context) {
 export class TranslateHoverProvider implements HoverProvider {
     provideHover(document: TextDocument, position: Position): ProviderResult<Hover> {
         const word = wordExtract(document, position);
-
-        return translate(word).then(t => new Hover('ffdfd ' + t));
+        if (!word) return undefined;
+        return googleTransalte
+            .translate('translate.google.cn', word)
+            .then(ff => new Hover('ffdfd ' + ff.text));
+        // .catch(window.showErrorMessage)
     }
 }
 
 function wordExtract(document: TextDocument, position: Position) {
     const line = position.line;
     const documentLine = document.lineAt(line).text;
+    const lineLength = documentLine.length;
     const linePoint = position.character;
 
     let words = [];
     let preWords = [];
-    for (let i = 0; i <= documentLine.length; i++) {
+    for (let i = 0; i <= lineLength; i++) {
         const w = documentLine[i];
         if (/[a-zA-Z]/.test(w)) {
             words.push(w);
@@ -105,7 +68,9 @@ function wordExtract(document: TextDocument, position: Position) {
         if (i >= linePoint && words.length === 0) {
             return preWords.join('');
         }
+        if (lineLength === i) {
+            return words.join('');
+        }
     }
     return undefined;
-    Promise;
 }
