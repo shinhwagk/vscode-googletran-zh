@@ -9,5 +9,5 @@ a simple translate extension. en -> zh-cn
 ## Features
 
 -   [x] hover
--   [ ] document
+-   [x] document
 -   [ ] selection
