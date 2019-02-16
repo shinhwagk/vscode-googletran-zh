@@ -1,5 +1,3 @@
-import * as got from 'got';
-
 function sM(a) {
     let b: any;
     if (null !== yr) b = yr;
@@ -64,42 +62,6 @@ const config = { TKK: '0' };
 const state = {
     TKK: config.TKK || '0'
 };
-
-async function updateTKK(service_urls) {
-    const now = Math.floor(Date.now() / 3600000);
-    if (Number(state.TKK.split('.')[0]) === now) {
-        return;
-    } else {
-        got(service_urls)
-            .then(res => {
-                const matches = res.body.match(/tkk:\s?'(.+?)'/i);
-
-                if (matches) {
-                    state.TKK = matches[1];
-                    config.TKK = state.TKK;
-                }
-
-                return;
-            })
-            .catch(err => {
-                const e = new Error();
-                e.message = err.message;
-                return;
-            });
-    }
-}
-
-export async function get(service_urls: string, text: string) {
-    return updateTKK(service_urls)
-        .then(() => {
-            let tk = sM(text);
-            tk = tk.replace('&tk=', '');
-            return { name: 'tk', value: tk };
-        })
-        .catch(err => {
-            throw err;
-        });
-}
 
 export function getTKKByBody(text: string, body: string) {
     const matches = body.match(/tkk:\s?'(.+?)'/i);

@@ -1,4 +1,4 @@
-import { Hover, languages, HoverProvider, TextDocument, ProviderResult, Position, window } from 'vscode';
+import { Hover, languages, HoverProvider, TextDocument, Position } from 'vscode';
 import * as googleTransalte from '../google-transalte';
 
 export function registerHoverProvider(context) {
@@ -10,7 +10,7 @@ class TranslateHoverProvider implements HoverProvider {
     async provideHover(document: TextDocument, position: Position): Promise<Hover> {
         const word = wordExtract(document, position);
         if (!word) return undefined;
-        const t = await googleTransalte.translate(word).then(ff => new Hover('ffdfd ' + ff.text));
+        const t = await googleTransalte.translate(word).then(ff => new Hover(word + ': ' + ff.text));
         return t;
         // .catch(window.showErrorMessage)
     }
