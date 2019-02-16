@@ -1,4 +1,6 @@
-.vscode/**
-out/test/**
-src/**
-.gitignore
+**/*
+
+!out/**/*.js
+!CHANGELOG.md
+!packages.json
+!README.md
