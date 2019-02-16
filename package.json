@@ -3,6 +3,7 @@
     "displayName": "vscode-googletran-zh",
     "description": "simaple translate, en -> zh-cn",
     "version": "0.0.1",
+    "publisher": "shinhwagk",
     "preview": true,
     "engines": {
         "vscode": "^1.31.0"
