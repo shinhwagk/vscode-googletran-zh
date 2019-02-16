@@ -148,6 +148,18 @@
   resolved "http://registry.npm.taobao.org/@types/anymatch/download/@types/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha1-M2utwb7sudrMOL6izzKt9ieoQho=
 
+"@types/caseless@*":
+  version "0.12.1"
+  resolved "http://registry.npm.taobao.org/@types/caseless/download/@types/caseless-0.12.1.tgz#9794c69c8385d0192acc471a540d1f8e0d16218a"
+  integrity sha1-l5TGnIOF0BkqzEcaVA0fjg0WIYo=
+
+"@types/form-data@*":
+  version "2.2.1"
+  resolved "http://registry.npm.taobao.org/@types/form-data/download/@types/form-data-2.2.1.tgz#ee2b3b8eaa11c0938289953606b745b738c54b1e"
+  integrity sha1-7is7jqoRwJOCiZU2BrdFtzjFSx4=
+  dependencies:
+    "@types/node" "*"
+
 "@types/got@^9.4.0":
   version "9.4.0"
   resolved "http://registry.npm.taobao.org/@types/got/download/@types/got-9.4.0.tgz#5c8b0f5a0dc1b67e676430561a0b85a0fde1d12d"
@@ -172,6 +184,16 @@
   version "11.9.4"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
   integrity sha1-zrAEilRttFP2JI8tHZXpN6bwChQ=
+
+"@types/request@^2.48.1":
+  version "2.48.1"
+  resolved "http://registry.npm.taobao.org/@types/request/download/@types/request-2.48.1.tgz#e402d691aa6670fbbff1957b15f1270230ab42fa"
+  integrity sha1-5ALWkapmcPu/8ZV7FfEnAjCrQvo=
+  dependencies:
+    "@types/caseless" "*"
+    "@types/form-data" "*"
+    "@types/node" "*"
+    "@types/tough-cookie" "*"
 
 "@types/tapable@*":
   version "1.0.4"

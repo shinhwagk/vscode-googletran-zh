@@ -2,20 +2,22 @@ import * as querystring from 'querystring';
 import * as got from 'got';
 import * as token from './google-tkk';
 import { google_transalte_url } from './constants';
+import * as request from 'request';
+import { getTKKByBody } from '../src/google-tkk';
 
-export function translate(text: string, gUrl?: string, opts?) {
+export function _translate(text: string, gUrl?: string, opts?) {
     opts = opts || { from: 'en', to: 'zh-cn' };
     gUrl = gUrl || google_transalte_url;
 
     return token
-        .get(gUrl, text)
+        .get(`https://${gUrl}`, text)
         .then(function(token) {
-            let url = `https://${gUrl}/translate_a/single`;
-            let data = {
-                client: opts.client || 'gtx',
-                sl: opts.from,
-                tl: opts.to,
-                hl: opts.to,
+            const url = `https://${gUrl}/translate_a/single`;
+            const data = {
+                client: opts.client || 'webapp',
+                sl: 'en',
+                tl: 'zh-CN',
+                hl: 'en',
                 dt: ['at', 'bd', 'ex', 'ld', 'md', 'qca', 'rw', 'rm', 'ss', 't'],
                 ie: 'UTF-8',
                 oe: 'UTF-8',
@@ -93,5 +95,65 @@ export function translate(text: string, gUrl?: string, opts?) {
                 });
         });
 }
+const options = {
+    url: 'https://translate.google.cn',
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    }
+};
 
-// translate('translate.google.cn/', 'apple').then(console.log);
+function _tttt(text) {
+    return new Promise<string>((resolve, reject) => {
+        request.get(options, (error, response, body) => {
+            if (error) {
+                reject(error);
+                return;
+            }
+            const token = getTKKByBody(text, body);
+            const data = {
+                client: 'webapp',
+                sl: 'en',
+                tl: 'zh-CN',
+                hl: 'en',
+                dt: ['at', 'bd', 'ex', 'ld', 'md', 'qca', 'rw', 'rm', 'ss', 't'],
+                ie: 'UTF-8',
+                oe: 'UTF-8',
+                otf: 1,
+                ssel: 0,
+                tsel: 0,
+                tk: token.value,
+                q: text
+            };
+            const u = `https://translate.google.cn/translate_a/single` + '?' + querystring.stringify(data);
+
+            request.get({ url: u }, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                    return;
+                }
+                resolve(body);
+            });
+        });
+    });
+}
+
+export async function translate(text) {
+    const res = await _tttt(text);
+    return format(res);
+}
+
+export function format(res) {
+    const result = {
+        text: ''
+    };
+
+    const body = JSON.parse(res);
+
+    body[0].forEach(obj => {
+        if (obj[0]) {
+            result.text += obj[0];
+        }
+    });
+
+    return result;
+}

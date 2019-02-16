@@ -100,3 +100,14 @@ export async function get(service_urls: string, text: string) {
             throw err;
         });
 }
+
+export function getTKKByBody(text: string, body: string) {
+    const matches = body.match(/tkk:\s?'(.+?)'/i);
+    if (matches) {
+        state.TKK = matches[1];
+        config.TKK = state.TKK;
+    }
+    let tk = sM(text);
+    tk = tk.replace('&tk=', '');
+    return { name: 'tk', value: tk };
+}
