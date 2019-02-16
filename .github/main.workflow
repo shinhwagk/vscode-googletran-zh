@@ -4,13 +4,13 @@ workflow "Build, Test, and Publish" {
 }
 
 action "Install" {
-  uses = "nuxt/actions-yarn@node-10"
+  uses = "nuxt/actions-yarn@master"
   args = "install"
 }
 
 action "Test" {
   needs = ["Install"]
-  uses = "nuxt/actions-yarn@node-10"
+  uses = "nuxt/actions-yarn@master"
   args = "test"
 }
 
