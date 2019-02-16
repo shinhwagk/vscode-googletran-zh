@@ -5,7 +5,6 @@ workflow "Build, Test, and Publish" {
 
 action "Install" {
   uses = "nuxt/actions-yarn@node-10"
-  args = "install"
 }
 
 action "Test" {
