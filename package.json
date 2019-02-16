@@ -8,6 +8,10 @@
     "engines": {
         "vscode": "^1.31.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shinhwagk/vscode-googletran-zh"
+    },
     "categories": [
         "Other"
     ],
