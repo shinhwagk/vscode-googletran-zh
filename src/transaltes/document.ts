@@ -1,6 +1,5 @@
 import {
     commands,
-    ProviderResult,
     ExtensionContext,
     workspace,
     TextDocumentContentProvider,
@@ -8,8 +7,7 @@ import {
     window,
     EventEmitter,
     Event,
-    TextDocumentChangeEvent,
-    TextEditorSelectionChangeEvent
+    TextDocumentChangeEvent
 } from 'vscode';
 import { translate } from '../google-transalte';
 
@@ -17,26 +15,29 @@ const scheme = 'vscode-googletran';
 const previewUri = Uri.parse(`${scheme}://document`);
 
 export function registerDocumentProvider(context: ExtensionContext) {
-    const myProvider = new TransalteDocumentContentProvider();
-    context.subscriptions.push(workspace.registerTextDocumentContentProvider(scheme, myProvider));
+    const docProvider = new TransalteDocumentContentProvider();
+    context.subscriptions.push(workspace.registerTextDocumentContentProvider(scheme, docProvider));
 
     workspace.onDidChangeTextDocument(
         (e: TextDocumentChangeEvent) => {
             if (e.document === window.activeTextEditor.document) {
-                setTimeout(() => myProvider.update(previewUri), 500);
+                setTimeout(() => docProvider.update(previewUri), 500);
             }
         },
         null,
         context.subscriptions
     );
 
-    commands.registerCommand('extension.translate.document', async () => {
-        const doc = await workspace.openTextDocument(previewUri);
-        await window.showTextDocument(doc, {
-            preview: false,
-            viewColumn: window.activeTextEditor.viewColumn + 1
-        });
-    });
+    context.subscriptions.push(
+        commands.registerCommand('extension.translate.document', async () => {
+            const doc = await workspace.openTextDocument(previewUri);
+            await window.showTextDocument(doc, {
+                preview: false,
+                viewColumn: window.activeTextEditor.viewColumn + 1
+            });
+        })
+    );
+    context.subscriptions.push(docProvider);
 }
 
 class TransalteDocumentContentProvider implements TextDocumentContentProvider {
@@ -65,5 +66,3 @@ class TransalteDocumentContentProvider implements TextDocumentContentProvider {
         this._onDidChange.dispose();
     }
 }
-
-function translateDocumentCommand() {}

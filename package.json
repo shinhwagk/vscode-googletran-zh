@@ -2,7 +2,7 @@
     "name": "vscode-googletran-zh",
     "displayName": "vscode-googletran-zh",
     "description": "simaple translate, en -> zh-cn",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "shinhwagk",
     "preview": true,
     "engines": {
