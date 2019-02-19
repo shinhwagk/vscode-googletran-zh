@@ -1,0 +1,646 @@
+[
+    [["精细", "fine", null, null, 2], [null, null, "Jīngxì", "fēn,fīn,ˈfēnā"]],
+    [
+        [
+            "adjective",
+            [
+                "精细",
+                "细",
+                "精",
+                "优良",
+                "精美",
+                "细微",
+                "良好",
+                "优秀",
+                "美好",
+                "纤细",
+                "优美",
+                "晴",
+                "考究",
+                "嘉",
+                "纤",
+                "佳",
+                "妙",
+                "棒",
+                "纤小",
+                "要得",
+                "明朗",
+                "爽",
+                "茸茸",
+                "爽朗",
+                "姝",
+                "姝丽"
+            ],
+            [
+                ["精细", ["fine", "meticulous"], null, 0.20961139],
+                ["细", ["fine", "thin", "detailed", "slender", "slim", "careful"], null, 0.12913783],
+                ["精", ["fine", "refined", "precise", "excellent", "seminal", "exquisite"], null, 0.10057265],
+                [
+                    "优良",
+                    ["excellent", "good", "fine", "superior", "exceptional", "first-rate"],
+                    null,
+                    0.02582919
+                ],
+                ["精美", ["fine", "exquisite", "delicate", "elegant"], null, 0.017752126],
+                ["细微", ["fine", "subtle", "slight", "subtile"], null, 0.014948789],
+                ["良好", ["good", "well", "favorable", "fine", "favourable"], null, 0.011461634],
+                [
+                    "优秀",
+                    ["excellent", "outstanding", "fine", "exceptional", "superb", "wonderful"],
+                    null,
+                    0.0049295872
+                ],
+                ["美好", ["fine", "happy", "glorious"], null, 0.0041511287],
+                ["纤细", ["slim", "thin", "fine", "tenuous", "tender"], null, 0.0015511635],
+                [
+                    "优美",
+                    ["beautiful", "graceful", "elegant", "exquisite", "fine", "excellent"],
+                    null,
+                    0.00071017438
+                ],
+                ["晴", ["clear", "fine"], null, 0.00043752574],
+                ["考究", ["exquisite", "fine", "fastidious", "particular"], null, 0.00033026177],
+                ["嘉", ["fine", "good", "nice", "great", "outasite", "perfect"], null, 0.00031025222],
+                ["纤", ["fine", "delicate", "minute"], null, 0.00028248786],
+                ["佳", ["good", "excellent", "beautiful", "fine"], null, 0.00017677639],
+                [
+                    "妙",
+                    ["wonderful", "clever", "subtle", "fine", "excellent", "indigenous"],
+                    null,
+                    8.615393e-5
+                ],
+                [
+                    "棒",
+                    ["excellent", "fine", "admirable", "eminent", "precious", "skilful"],
+                    null,
+                    1.8343229e-5
+                ],
+                ["纤小", ["fine", "delicate", "graceful", "airy-fairy"], null, 1.6964714e-5],
+                ["要得", ["fine", "good", "desirable"], null, 1.6964714e-5],
+                ["明朗", ["clear", "lucid", "fine"], null, 1.6187843e-5],
+                ["爽", ["bright", "clear", "fine", "open", "straightforward", "frank"], null, 8.0135633e-6],
+                ["茸茸", ["soft and thick", "downy", "fine"], null, 6.6434777e-6],
+                ["爽朗", ["hearty", "bright", "candid", "clear", "frank", "fine"], null, 2.9480252e-6],
+                ["姝", ["womanlike", "beautiful", "charming", "fine", "lovely", "nice"], null, 2.1907863e-6],
+                ["姝丽", ["beautiful", "charming", "delightful", "fine", "lovely"]]
+            ],
+            "fine",
+            3
+        ],
+        [
+            "noun",
+            ["罚款", "罚金", "短"],
+            [
+                [
+                    "罚款",
+                    ["fine", "penalty", "punishment", "forfeit", "penal sum", "amercement"],
+                    null,
+                    0.075916216
+                ],
+                ["罚金", ["fine", "mulct", "penal sum", "amercement"], null, 0.0046309186],
+                ["短", ["short", "weak point", "lack", "fault", "fine"], null, 1.0953243e-5]
+            ],
+            "fine",
+            1
+        ],
+        [
+            "verb",
+            ["罚款", "罚金", "湔"],
+            [
+                ["罚款", ["fine", "amerce", "levy", "penalize", "tax", "confiscate"], null, 0.075916216],
+                ["罚金", ["fine", "penalize", "mulct", "exact", "amerce", "confiscate"], null, 0.0046309186],
+                ["湔", ["cleanse", "clarify", "clean", "clear", "epurate", "fine"], null, 1.4593784e-6]
+            ],
+            "fine",
+            2
+        ],
+        [
+            "adverb",
+            ["好", "非常好"],
+            [
+                ["好", ["well", "fine", "OK", "okay", "okey", "okey dokey"], null, 0.0096516637],
+                ["非常好", ["beautifully", "fine", "first-class", "first-rate", "splendidly", "super"]]
+            ],
+            "fine",
+            4
+        ]
+    ],
+    "en",
+    null,
+    null,
+    [
+        [
+            "fine",
+            null,
+            [
+                ["精细", 1000, true, false],
+                ["细", 1000, true, false],
+                ["精", 1000, true, false],
+                ["罚款", 1000, true, false]
+            ],
+            [[0, 4]],
+            "fine",
+            0,
+            0
+        ]
+    ],
+    0.91042781,
+    null,
+    [["en"], null, [0.91042781], ["en"]],
+    null,
+    null,
+    [
+        [
+            "adjective",
+            [
+                [
+                    [
+                        "excellent",
+                        "first-class",
+                        "first-rate",
+                        "great",
+                        "exceptional",
+                        "outstanding",
+                        "quality",
+                        "superior",
+                        "splendid",
+                        "magnificent",
+                        "exquisite",
+                        "choice",
+                        "select",
+                        "prime",
+                        "supreme",
+                        "superb",
+                        "wonderful",
+                        "superlative",
+                        "of high quality",
+                        "second to none",
+                        "A1",
+                        "top-notch",
+                        "blue-ribbon",
+                        "blue-chip",
+                        "splendiferous"
+                    ],
+                    "m_en_us1247113.001"
+                ],
+                [
+                    [
+                        "worthy",
+                        "admirable",
+                        "praiseworthy",
+                        "laudable",
+                        "estimable",
+                        "upright",
+                        "upstanding",
+                        "respectable"
+                    ],
+                    "m_en_us1247113.002"
+                ],
+                [
+                    [
+                        "all right",
+                        "acceptable",
+                        "suitable",
+                        "good (enough)",
+                        "passable",
+                        "satisfactory",
+                        "adequate",
+                        "reasonable",
+                        "tolerable",
+                        "OK"
+                    ],
+                    "m_en_us1247113.003"
+                ],
+                [
+                    [
+                        "in good health",
+                        "well",
+                        "healthy",
+                        "all right",
+                        "(fighting) fit",
+                        "as fit as a fiddle",
+                        "blooming",
+                        "thriving",
+                        "in good shape",
+                        "in good condition",
+                        "in fine fettle",
+                        "OK",
+                        "in the pink"
+                    ],
+                    "m_en_us1247113.005"
+                ],
+                [
+                    [
+                        "fair",
+                        "dry",
+                        "bright",
+                        "clear",
+                        "sunny",
+                        "without a cloud in the sky",
+                        "warm",
+                        "balmy",
+                        "summery"
+                    ],
+                    "m_en_us1247113.006"
+                ],
+                [
+                    [
+                        "impressive",
+                        "imposing",
+                        "striking",
+                        "splendid",
+                        "grand",
+                        "majestic",
+                        "magnificent",
+                        "stately"
+                    ],
+                    "m_en_us1247113.007"
+                ],
+                [
+                    [
+                        "elegant",
+                        "stylish",
+                        "expensive",
+                        "smart",
+                        "chic",
+                        "fashionable",
+                        "fancy",
+                        "sumptuous",
+                        "lavish",
+                        "opulent",
+                        "flashy",
+                        "swanky",
+                        "ritzy",
+                        "plush"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "keen",
+                        "quick",
+                        "alert",
+                        "sharp",
+                        "bright",
+                        "brilliant",
+                        "astute",
+                        "clever",
+                        "intelligent",
+                        "perspicacious"
+                    ],
+                    ""
+                ],
+                [["delicate", "fragile", "dainty"], "m_en_us1247113.014"],
+                [["thin", "light", "delicate", "wispy", "flyaway"], "m_en_us1247113.011"],
+                [["sharp", "keen", "acute", "sharpened", "razor-sharp"], "m_en_us1247113.012"],
+                [
+                    [
+                        "sheer",
+                        "light",
+                        "lightweight",
+                        "thin",
+                        "flimsy",
+                        "diaphanous",
+                        "filmy",
+                        "gossamer",
+                        "silky",
+                        "transparent",
+                        "translucent",
+                        "see-through"
+                    ],
+                    "m_en_us1247113.011"
+                ],
+                [
+                    ["fine-grained", "powdery", "powdered", "dusty", "ground", "crushed", "comminuted"],
+                    "m_en_us1247113.013"
+                ],
+                [
+                    ["intricate", "delicate", "detailed", "elaborate", "dainty", "meticulous"],
+                    "m_en_us1247113.014"
+                ],
+                [["subtle", "ultra-fine", "nice", "hair-splitting", "nitpicking"], "m_en_us1247113.015"],
+                [
+                    [
+                        "elevated",
+                        "lofty",
+                        "exalted",
+                        "noble",
+                        "refined",
+                        "sensitive",
+                        "cultivated",
+                        "cultured",
+                        "civilized",
+                        "sophisticated"
+                    ],
+                    ""
+                ],
+                [["discerning", "discriminating", "refined", "cultivated", "cultured", "critical"], ""],
+                [["ok", "o.k.", "hunky-dory", "okay", "all right"], ""]
+            ],
+            "fine"
+        ],
+        [
+            "adverb",
+            [
+                [
+                    [
+                        "well",
+                        "all right",
+                        "not badly",
+                        "satisfactorily",
+                        "adequately",
+                        "nicely",
+                        "tolerably",
+                        "OK",
+                        "good"
+                    ],
+                    ""
+                ],
+                [["ok", "alright", "all right", "very well"], ""],
+                [["exquisitely", "delicately", "finely"], ""]
+            ],
+            "fine"
+        ],
+        [
+            "noun",
+            [
+                [["(financial) penalty", "sanction", "fee", "charge"], "m_en_us1247114.001"],
+                [["amercement", "mulct"], ""]
+            ],
+            "fine"
+        ],
+        [
+            "verb",
+            [[["penalize", "impose a fine on", "charge"], "m_en_us1247114.002"], [["ticket"], ""]],
+            "fine"
+        ]
+    ],
+    [
+        [
+            "adjective",
+            [
+                ["of high quality.", "m_en_us1247113.001", "this was a fine piece of filmmaking"],
+                [
+                    "(of a thread, filament, or person's hair) thin.",
+                    "m_en_us1247113.011",
+                    "I have always had fine and dry hair"
+                ]
+            ],
+            "fine"
+        ],
+        [
+            "adverb",
+            [
+                [
+                    "in a satisfactory or pleasing manner; very well.",
+                    "m_en_us1247113.018",
+                    "“And how's the job-hunting going?” “Oh, fine.”"
+                ]
+            ],
+            "fine"
+        ],
+        [
+            "noun",
+            [
+                [
+                    "very small particles found in mining, milling, etc..",
+                    "m_en_us1247113.017",
+                    "It raises dust, separating fines from aggregate."
+                ],
+                [
+                    "a sum of money exacted as a penalty by a court of law or other authority.",
+                    "m_en_us1247114.001",
+                    "a parking fine"
+                ],
+                [
+                    "(in musical directions) the place where a piece of music finishes (when this is not at the end of the score but at the end of an earlier section that is repeated at the end of the piece).",
+                    "m_en_us1247116.001"
+                ]
+            ],
+            "fine"
+        ],
+        [
+            "verb",
+            [
+                [
+                    "clarify (beer or wine) by causing the precipitation of sediment during production.",
+                    "m_en_us1247113.019",
+                    "We fine the wine with egg extracts, so are we to put that on the label?"
+                ],
+                [
+                    "make or become thinner.",
+                    "m_en_us1247113.021",
+                    "it can be fined right down to the finished shape"
+                ],
+                [
+                    "punish (someone) by making them pay a sum of money, typically as a penalty for breaking the law.",
+                    "m_en_us1247114.002",
+                    "he was fined $600 and sentenced to one day in jail"
+                ]
+            ],
+            "fine"
+        ]
+    ],
+    [
+        [
+            ["if the weather stays \u003cb\u003efine\u003c/b\u003e", null, null, null, 3, "neid_7115"],
+            [
+                "The grey paintwork and windows were already covered in a \u003cb\u003efine\u003c/b\u003e layer of silt.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.013"
+            ],
+            [
+                "One of his mentors wanted to reschedule to another day, it was \u003cb\u003efine\u003c/b\u003e so Kenny accepted.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.003"
+            ],
+            ["a \u003cb\u003efine\u003c/b\u003e layer", null, null, null, 3, "neid_7116"],
+            [
+                "It may be \u003cb\u003efine\u003c/b\u003e to say average rates have been lowered with the various rebates.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.003"
+            ],
+            [
+                "He was a \u003cb\u003efine\u003c/b\u003e figure of a man, she thought and some woman must be missing him.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.007"
+            ],
+            [
+                "It was a good lesson that the truth is more important than \u003cb\u003efine\u003c/b\u003e feelings.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.016"
+            ],
+            [
+                "She was a very popular lady who possessed many \u003cb\u003efine\u003c/b\u003e qualities and was held in high esteem by all who had the pleasure of her acquaintance.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.001"
+            ],
+            ["now's a \u003cb\u003efine\u003c/b\u003e time to tell me!", null, null, null, 3, "neid_7110"],
+            ["\u003cb\u003efine\u003c/b\u003e china", null, null, null, 3, "neid_7118"],
+            [
+                "Her husband, who had been in \u003cb\u003efine\u003c/b\u003e health, came home one day from the office feeling ill.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.005"
+            ],
+            [
+                "A \u003cb\u003efine\u003c/b\u003e figure of a man, he radiates masculine self-assurance, a quality that interested her greatly.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.007"
+            ],
+            [
+                "He appears to be \u003cb\u003efine\u003c/b\u003e though because I didn't find anything that had triggered the headache of his.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.005"
+            ],
+            [
+                "The wedding guests at Cana celebrated with wine that had aged, and rejoiced in its \u003cb\u003efine\u003c/b\u003e quality.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.001"
+            ],
+            [
+                "You enter the property via a \u003cb\u003efine\u003c/b\u003e hallway with an imposing stained glass window and original spindled staircase sweeping to the first floor.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.007"
+            ],
+            [
+                "It had a selection of top-notch artisan products and \u003cb\u003efine\u003c/b\u003e wines, in addition to its bigger industries.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.001"
+            ],
+            [
+                "In places the \u003cb\u003efine\u003c/b\u003e filaments run on top of the thicker filaments, and are thus closer to the plasma membrane.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.011"
+            ],
+            [
+                "The river is still coloured but this is expected to clear over the coming week, if the \u003cb\u003efine\u003c/b\u003e weather forecasted arrives.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.006"
+            ],
+            ["a parking \u003cb\u003efine\u003c/b\u003e", null, null, null, 3, "m_en_gb0296230.001"],
+            [
+                "Upon awaking four days later Hughes contrarily declared himself to be in \u003cb\u003efine\u003c/b\u003e health.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.005"
+            ],
+            [
+                "If we couldn't make \u003cb\u003efine\u003c/b\u003e distinctions in the natural world, we'd be done for.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.015"
+            ],
+            [
+                "Srivatsa reveals a \u003cb\u003efine\u003c/b\u003e feeling for the telling detail, and a great sense of humour.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.016"
+            ],
+            [
+                "People with anorexia have dry skin and might have \u003cb\u003efine\u003c/b\u003e hair growing on their body.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.011"
+            ],
+            [
+                "Those of a higher class have theirs hand made by a tailor with intricate needlework and \u003cb\u003efine\u003c/b\u003e fabric.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.014"
+            ],
+            ["he was \u003cb\u003efine\u003c/b\u003e about it", null, null, null, 3, "neid_7109"],
+            [
+                "Despite the specimen's \u003cb\u003efine\u003c/b\u003e preservation, we are not sure to what species it belongs.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.009"
+            ],
+            [
+                "However, in all this \u003cb\u003efine\u003c/b\u003e weather, something else has come out - insects.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.006"
+            ],
+            [
+                "Of exceptionally \u003cb\u003efine\u003c/b\u003e quality, it is pyramid-shaped and inset with beaded gold wiring in the shape of a serpent.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.001"
+            ],
+            [
+                "Fish extract is used to \u003cb\u003efine\u003c/b\u003e the wine - to take all the cloudy particles out of it.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.019"
+            ],
+            [
+                "He could not resist the urge to look up, and when he did, his eyes became full of very \u003cb\u003efine\u003c/b\u003e , golden particles.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1247113.013"
+            ]
+        ]
+    ]
+]

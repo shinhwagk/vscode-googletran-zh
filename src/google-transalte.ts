@@ -45,11 +45,6 @@ function _tttt(text) {
     });
 }
 
-export async function translate(text) {
-    const res = await _tttt(text);
-    return format(res);
-}
-
 export function format(res) {
     const result = {
         text: ''
@@ -64,4 +59,23 @@ export function format(res) {
     });
 
     return result;
+}
+
+export function formatTop5(res) {
+    const result = {
+        text: ''
+    };
+    const body = JSON.parse(res);
+    result.text = body[1][0][1].slice(0, 5).join(',');
+    return result;
+}
+
+export async function translate(text) {
+    const res = await _tttt(text);
+    return format(res);
+}
+
+export async function translateTop5(text) {
+    const res = await _tttt(text);
+    return formatTop5(res);
 }
